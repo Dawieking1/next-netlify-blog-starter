@@ -1,11 +1,16 @@
 import Layout from '@components/Layout'
 import PostList from '@components/PostList'
-
 import getPosts from '@utils/getPosts'
+import Head from 'next/head'
+
 
 const Index = ({ posts, title, description, ...props }) => {
   return (
     <>
+      <Head>
+        <link rel="webmention" href="https://webmention.io/webmentions-dawieking.netlify.app/webmention" />
+        <link rel="pingback" href="https://webmention.io/webmentions-dawieking.netlify.app/xmlrpc" />
+      </Head>
       <Layout pageTitle={title} description={description}>
         <h1 className="title">Welcome to this demo blog!</h1>
 
@@ -36,7 +41,7 @@ const Index = ({ posts, title, description, ...props }) => {
 }
 
 export default Index
-
+k
 export async function getStaticProps() {
   const configData = await import(`../siteconfig.json`)
 
