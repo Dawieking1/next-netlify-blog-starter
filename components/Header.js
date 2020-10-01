@@ -11,6 +11,7 @@ export default function Header() {
           <Link href="/about">
             <a>About</a>
           </Link>
+          <a href="https://twitter.com/AndrevanDaalen" rel="me">Twitter</a>
         </nav>
       </header>
       <style jsx>{`
